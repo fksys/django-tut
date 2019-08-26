@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div style="background:#ccc;position:relative">
+            <div id="title" style="float:left">
+                <h2>
+                    <a href="{%url 'post_detail' pk=post.pk %}"> {{ post.title }}</a>
+                </h2>
+            </div>
+            <div style="float:right;padding:10px">
+                    {{ post.published_date }} 
+            </div>
+        </div>
+        
+        <div style="background:#eee; display:flex; justify-content:center; align-items:center">
+            {{ post.text }}
+        </div>    
+    {% endfor %}
+{% endblock %}
+    
+

@@ -1,0 +1,9 @@
+#header{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+#header h1 a{
+    color:rgb(172, 230, 15);
+    text-align: center;
+}
